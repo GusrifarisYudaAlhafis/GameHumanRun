@@ -1,0 +1,211 @@
+body {
+    background:#f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.detect {
+  border:1px solid black;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/bg.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: animasiBackground 100s linear infinite;
+}
+
+@keyframes animasiBackground {
+ from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2560px 0;
+  }
+}
+
+.namaGame {
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.instruksi {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 15px;
+    width: 515px;
+    color: #444321;
+}
+
+.nilai {
+  font-size: 5em;
+  margin: 0px;
+  color: #FFFFFF;
+  text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+#info, #papanNilai {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top:-250px;
+  transform: translate(-50%, 0%);
+}
+
+.pause {
+  animation-play-state: paused !important;
+}
+
+#orang {
+  width: 95px;
+  height: 135px;
+  margin: 0px auto;
+  position: absolute;
+  left: 150px;
+  bottom: 20px;
+  background: url('../img/animasi.png');
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+}
+
+.jalan {
+  animation: jalan .7s steps(15) infinite;
+}
+
+@keyframes jalan {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: -2100px;
+    }
+}
+
+.lompat {
+  animation: lompat 2.7s steps(15) forwards;
+}
+
+
+@keyframes lompat {
+    0% {
+      bottom: 20px;
+      background-position-x: 0px;
+      background-position-y: -138px;
+    }
+    20% {
+        bottom: 160px;
+    }
+    30% {
+        bottom: 180px;
+    }
+    85% {
+        bottom: 180px;
+    }
+    90% {
+        bottom: 160px;
+    }
+    100% {
+      bottom: 20px;
+      background-position-x: -2100px;
+      background-position-y: -138px;
+    }
+}
+
+.mati {
+  width: 140px !important;
+  height: 138px !important;
+  animation: mati .7s steps(14) forwards;
+}
+
+@keyframes mati {
+    from {
+        background-position-x: 0px;
+        background-position-y: -276px;
+    }
+    to {
+        background-position-x: -1960px;
+        background-position-y: -276px;
+    }
+}
+
+.motor {
+  height: 136px;
+  margin: 0px auto;
+  background: url('../img/motor.png');
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  animation-play-state: paused;
+}
+
+@keyframes maju {
+    from {
+        left:1380px;
+    }
+    to {
+        left: -750px;
+    }
+}
+
+.motor1 {
+  width: 240px;
+}
+
+.motor2 {
+  width: 184px;
+}
+
+.motor3 {
+  width: 190px;
+}
+
+@keyframes motor1 {
+    to {
+        background-position-x: -750px;
+    }
+}
+
+@keyframes motor2 {
+    from {
+        background-position-y: -136px;
+    }
+    to {
+        background-position-y: -136px;
+        background-position-x: -750px;
+    }
+}
+
+@keyframes motor3 {
+    from {
+        background-position-y: -272px;
+    }
+    to {
+        background-position-y: -272px;
+        background-position-x: -750px;
+    }
+}
+
+#infoNyawa {
+  position:absolute;
+  top:-250px;
+  left: 5px;
+  display: flex;
+}
+
+.nyawa {
+  width: 30px;
+  height: 27px;
+  background: url('../img/hati.png');
+  margin: 0px 2px;
+}
