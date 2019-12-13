@@ -1,2 +1,2 @@
 # GameHumanRun
-Using Jquery
+Jquery
